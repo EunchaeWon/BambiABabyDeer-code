@@ -1,4 +1,4 @@
-# Unity - code only repo
+#  무거운/자동생성 폴더는 전부 제외
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -15,8 +15,15 @@ MemoryCaptures/
 .DS_Store
 Thumbs.db
 
-# Keep only essential code & settings
-!Assets/
-!Assets/Scripts/
-!ProjectSettings/
-!Packages/
+#  Assets 전체는 기본적으로 제외
+Assets/**
+
+#  하지만 스크립트만 허용 (하위 전부)
+!Assets/Scripts/**
+# (선택) 스크립트 관련 메타/asmdef도 허용
+!Assets/Scripts/**/*.meta
+!Assets/Scripts/**/*.asmdef
+
+#  프로젝트 설정/패키지는 포함
+!ProjectSettings/**
+!Packages/**
