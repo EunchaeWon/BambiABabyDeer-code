@@ -1,4 +1,4 @@
-#  무거운/자동생성 폴더는 전부 제외
+# 🧹 기본적으로 제외할 폴더 (Unity 자동 생성)
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -15,15 +15,22 @@ MemoryCaptures/
 .DS_Store
 Thumbs.db
 
-#  Assets 전체는 기본적으로 제외
+# ❌ 기본적으로 모든 Assets 폴더는 제외
 Assets/**
 
-#  하지만 스크립트만 허용 (하위 전부)
+# ✅ 직접 작성한 코드와 설정은 포함
 !Assets/Scripts/**
-# (선택) 스크립트 관련 메타/asmdef도 허용
 !Assets/Scripts/**/*.meta
 !Assets/Scripts/**/*.asmdef
-
-#  프로젝트 설정/패키지는 포함
 !ProjectSettings/**
 !Packages/**
+
+# ✅ 직접 만든 아트나 씬만 허용 (필요한 경우 아래 폴더/파일만 예외로 지정)
+!Assets/Scenes/DemoScene.unity
+!Assets/Scenes/DemoScene.unity.meta
+!Assets/Art/MyOwnTextures/**
+!Assets/Art/MyOwnTextures/**/*.meta
+
+# ✅ 기타 내가 만든 전용 폴더가 있다면 여기에 추가 가능
+# !Assets/MyCustomShaders/**
+# !Assets/UI/CustomIcons/**
